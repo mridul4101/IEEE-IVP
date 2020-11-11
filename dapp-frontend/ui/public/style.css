@@ -1,0 +1,99 @@
+svg {
+  height: 140%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -100px;
+  z-index: -1;
+}
+
+#top .st48,
+#top .st52,
+#top .st50 {
+  animation: drift-right-up 80s alternate;
+}
+#top .st33,
+#top .st51 {
+  animation: drift-right-up 75s alternate;
+}
+#top .st49,
+#top .st42 {
+  animation: drift-right-up 65s alternate;
+}
+
+#bottom .st11,
+#bottom .st56 {
+  animation: drift-down 70s alternate;
+}
+#bottom .st53,
+#bottom .st54,
+#bottom .st8 {
+  animation: drift-right 195s alternate;
+}
+#bottom .st55,
+#bottom .st36,
+#bottom .st33,
+#bottom .st46 {
+  animation: drift-down 115s alternate;
+}
+#bottom .st51 {
+  animation: drift-down-right 105s alternate;
+}
+
+#nearright .st40,
+#nearright .st43,
+#nearright .st33 {
+  animation: drift-right 115s;
+}
+#nearright .st41,
+#nearright .st44 {
+  animation: drift-right-up 105s;
+}
+#nearright .st42,
+#nearright .st45,
+#nearright .st46,
+#nearright .st55,
+#nearright .st47 {
+  animation: drift-right 135s;
+}
+
+#farright .st54,
+#farright .st58,
+#farright .st59 {
+  animation: drift-right 55s;
+}
+#farright .st57,
+#farright .st51 {
+  animation: drift-right-up 40s;
+}
+
+@keyframes drift-right {
+  100% {
+    transform: translate(2000px, -20px);
+  }
+}
+@keyframes drift-right-up {
+  100% {
+    transform: translate(2000px, -250px);
+  }
+}
+@keyframes drift-up {
+  100% {
+    transform: translate(10px, -1450px);
+  }
+}
+@keyframes drift-up-right {
+  100% {
+    transform: translate(175px, -1550px);
+  }
+}
+@keyframes drift-down {
+  100% {
+    transform: translate(2000px, 1220px);
+  }
+}
+@keyframes drift-down-right {
+  100% {
+    transform: translate(1450px, 320px);
+  }
+}

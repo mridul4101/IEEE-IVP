@@ -1,0 +1,40 @@
+@import url("https:fonts.googleapis.com/css2?family=Muli&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Muli", sans-serif;
+}
+.navbar {
+  background-color: transparent !important;
+}
+.navbar-brand {
+  font-size: 1.4rem !important;
+  color: #565387 !important;
+}
+.navbar a {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.menu_active {
+  font-weight: bold;
+  border-bottom: 1px solid #565387;
+}
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: rgba(41, 175, 199, 0.9);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(253, 253, 253, 0.966);
+}
+.navbar-light .navbar-toggler {
+  color: rgba(252, 252, 252, 0.55);
+  border-color: rgba(250, 247, 247, 0.966);
+  background-color: rgba(233, 229, 229, 0.3);
+}
+.navbar a:hover {
+  color: #3498db !important;
+}
+
+@media (max-width: 991px) {
+}
