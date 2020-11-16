@@ -1,23 +1,33 @@
 svg {
-  height: 140%;
+  height: 130%;
   display: block;
   position: absolute;
   left: 0;
   top: -100px;
   z-index: -1;
+  width: auto;
+}
+body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 #top .st48,
 #top .st52,
-#top .st50 {
+#top .st50,
+#top .st32 {
   animation: drift-right-up 80s alternate;
 }
 #top .st33,
-#top .st51 {
+#top .st51,
+#top .st25,
+#top .st46,
+#top .st8 {
   animation: drift-right-up 75s alternate;
 }
 #top .st49,
-#top .st42 {
+#top .st42,
+#top .st16 {
   animation: drift-right-up 65s alternate;
 }
 
@@ -26,17 +36,18 @@ svg {
   animation: drift-down 70s alternate;
 }
 #bottom .st53,
-#bottom .st54,
-#bottom .st8 {
+#bottom .st54 {
   animation: drift-right 195s alternate;
 }
 #bottom .st55,
 #bottom .st36,
 #bottom .st33,
-#bottom .st46 {
+#bottom .st35 {
   animation: drift-down 115s alternate;
 }
-#bottom .st51 {
+#bottom .st51,
+#bottom .st9,
+#bottom .st12 {
   animation: drift-down-right 105s alternate;
 }
 
@@ -46,7 +57,11 @@ svg {
   animation: drift-right 115s;
 }
 #nearright .st41,
-#nearright .st44 {
+#nearright .st44,
+#nearright .st10,
+#nearright .st15,
+#nearright .st24,
+#nearright .st20 {
   animation: drift-right-up 105s;
 }
 #nearright .st42,
@@ -59,11 +74,15 @@ svg {
 
 #farright .st54,
 #farright .st58,
-#farright .st59 {
+#farright .st59,
+#farright .st5,
+#farright .st37 {
   animation: drift-right 55s;
 }
 #farright .st57,
-#farright .st51 {
+#farright .st51,
+#farright .st6,
+#farright .st61 {
   animation: drift-right-up 40s;
 }
 
