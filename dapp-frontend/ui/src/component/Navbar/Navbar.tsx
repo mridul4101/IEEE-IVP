@@ -24,16 +24,19 @@ const Navbar =() =>{
                         </NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink to="/Allsurvey" className="nav-link">All survey</NavLink>
+                        <NavLink to="/Createsurvey" className="nav-link">Create survey</NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink to="/Mysurvey" className="nav-link" href="#">My survey</NavLink>
+                        <NavLink to="/Allsurvey" className="nav-link">All Survey</NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink to="/Connectwallet" className="nav-link" href="#">Connect wallet</NavLink>
+                        <NavLink to="/Mysurvey" className="nav-link">My Survey</NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink to="/Help"className="nav-link" href="#">Help</NavLink>
+                        <NavLink to="/Connectwallet" className="nav-link" >Connect Wallet</NavLink>
+                        </li>
+                        <li className="nav-item">
+                        <NavLink to="/Help"className="nav-link" >Help</NavLink>
                         </li>
       
                         </ul>

@@ -1,0 +1,44 @@
+.card-container {
+  perspective: 1000px;
+  height: 270px;
+  width: 250px;
+}
+.cards {
+  transition: transform 0.8s;
+  position: relative;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.card-container:hover .cards {
+  transform: rotateY(180deg);
+}
+.card-front {
+  position: absolute;
+  background-color: rgba(8, 86, 88, 0.8);
+  padding: 5px 5px;
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+}
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-weight: 300;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  background-color: rgba(10, 138, 138);
+  padding: 10px 10px;
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+}
+.h6 {
+  text-align: center;
+}

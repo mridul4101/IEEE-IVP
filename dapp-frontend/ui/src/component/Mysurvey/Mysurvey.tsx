@@ -1,6 +1,6 @@
 import React from "react";
-
-import Card from "./Card";
+// import Mysurveydata from "./Mysurveydata";
+// import Card from "../Card/Card";
 const Mysurvey = () => {
   return (
     <>
@@ -10,10 +10,13 @@ const Mysurvey = () => {
       <div className="container-fluid mb-5">
         <div className="row">
           <div className="col-10 mx-auto">
-            <div className="row gy-4">
-              <Card />
+             <div className="row gy-4">
+              {/* {
+                Mysurveydata.map((val,index)=>{
+                  return <Card key={index}  title={val.title} button={val.button} links={val.links} />
+                })
+              } */}
             </div>
-
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import  React from "react";
 import './Home.css';
 import Homedata from "./Homedata";
-import Card from "../Card";
+import Card from "../Card/Card";
 const Home=()=> {
   return (
     <>
@@ -11,11 +11,11 @@ const Home=()=> {
       </div>
       <div className="container-fluid mb-5">
         <div className="row">
-          <div className="col-10 mx-auto">
+          <div className="col-8 mx-auto">
             <div className="row gy-4">
               {
                 Homedata.map((val,index)=>{
-                  return <Card key={index} imgsrc={val.imgsrc} title={val.title} />
+                  return <Card key={index} imgsrc={val.imgsrc} title={val.title} content={val.content} button={val.button} links={val.links} />
                 })
               }
             </div>
