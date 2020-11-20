@@ -6,6 +6,7 @@
   height: 100vh;
   background-size: cover;
 }
+
 .left-sidebar {
   position: fixed;
   width: 50%;
@@ -331,12 +332,7 @@ option {
   margin-right: 6px;
   margin-left: 14px;
 }
-/* .form-check .form-check-input {
-  float: left;
-  margin-left: -0.5em;
-  margin-right: 5px; 
-}
-*/
+
 Label {
   font-weight: 700;
 }
