@@ -16,7 +16,7 @@
 }
 .card-front {
   position: absolute;
-  background-color: rgba(8, 86, 88, 0.8);
+  background-color: rgba(8, 86, 88, 0.7);
   padding: 5px 5px;
   backface-visibility: hidden;
   height: 100%;
@@ -33,7 +33,7 @@
 .card-back {
   transform: rotateY(180deg);
   position: absolute;
-  background-color: rgba(10, 138, 138);
+  background-color: rgb(6, 107, 107, 0.7);
   padding: 10px 10px;
   backface-visibility: hidden;
   height: 100%;

@@ -1,0 +1,23 @@
+.cardtop {
+  background-color: rgb(10, 34, 36);
+  animation: change 8s infinite;
+}
+
+@keyframes change {
+  25% {
+    background-color: #0e5767;
+  }
+  50% {
+    background-color: #0e5f68;
+  }
+  75% {
+    background-color: rgb(4, 93, 109);
+  }
+  100% {
+    background-color: #073742;
+  }
+}
+
+.card-text {
+  color: white;
+}

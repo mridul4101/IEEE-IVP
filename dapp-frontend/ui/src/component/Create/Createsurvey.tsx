@@ -22,7 +22,7 @@ const Createsurvey = () => {
           <div className="row w-100 ">
             
 
-            <div className="col-md-6 mx-auto bg-light p-5">
+            <div className="col-md-6 mx-auto bg-light p-4">
 
 
               <div className="tabs ">
