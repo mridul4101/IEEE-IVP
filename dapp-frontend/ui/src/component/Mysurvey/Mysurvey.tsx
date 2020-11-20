@@ -1,6 +1,6 @@
 import React from "react";
-// import Mysurveydata from "./Mysurveydata";
-// import Card from "../Card/Card";
+import Mysurveydata from "./Mysurveydata";
+ import StaticCard from "../StaticCard/StaticCard";
 const Mysurvey = () => {
   return (
     <>
@@ -11,11 +11,11 @@ const Mysurvey = () => {
         <div className="row">
           <div className="col-10 mx-auto">
              <div className="row gy-4">
-              {/* {
+              {
                 Mysurveydata.map((val,index)=>{
-                  return <Card key={index}  title={val.title} button={val.button} links={val.links} />
+                  return <StaticCard key={index}  title={val.title} description={val.description} button={val.button} links={val.links} />
                 })
-              } */}
+              } 
             </div>
           </div>
         </div>
