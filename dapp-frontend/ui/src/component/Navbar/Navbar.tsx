@@ -1,9 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import {NavLink} from "react-router-dom";
 import web from "./logos.png";
+import { Button } from 'react-bootstrap';
+import { ethers } from 'ethers';
 
 const Navbar =() =>{
+
+    const [address,setAddress] = useState("Connect to Wallet");
+
+    const loadMetamask = async () => {
+
+        try 
+        {
+            if (window.ethereum) 
+            {
+                //@ts-ignore
+                window.ethereum.enable();
+                const metamaskProvider = new ethers.providers.Web3Provider(window.ethereum);
+                const network = await metamaskProvider.getNetwork();
+
+                if (network.chainId === 4) 
+                {
+                    network.name = 'Rinkeby Test Network';
+                    // alert('Please connect with Rinkeby network');
+                } 
+                // else if (network.chainId === 5196) 
+                // {
+                //     network.name = 'Test EraSwap Network';
+                // } 
+                // else if (network.chainId === 5197) 
+                // {
+                //     network.name = 'Main Era Swap Network';
+                // }
+
+                console.log(ethers.Wallet);
+                const onCorrectNetwork = network.chainId;
+
+                if (onCorrectNetwork !== 4) 
+                {
+                    alert('Please connect to rinkeby network ');
+                } 
+                else 
+                {
+                    const wallet = await metamaskProvider.getSigner();
+
+                    window.wallet = wallet;
+
+                    console.log('Wallet : ', wallet);
+                    const address = await wallet.getAddress();
+                    setAddress(address);
+                }
+            }
+        }
+        catch(error)
+        {
+            alert(error.message);
+        }
+    }
+
     return(
         <>
             <div className="container-fluid">
@@ -20,8 +75,7 @@ const Navbar =() =>{
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li className="nav-item ">
-                        <NavLink to="/" className="nav-link active" aria-current="page" >Home 
-                        </NavLink>
+                        <NavLink to="/" className="nav-link active" aria-current="page" >Home </NavLink>
                         </li>
                         <li className="nav-item">
                         <NavLink to="/Createsurvey" className="nav-link">Create survey</NavLink>
@@ -33,7 +87,7 @@ const Navbar =() =>{
                         <NavLink to="/Mysurvey" className="nav-link">My Survey</NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink to="/Connectwallet" className="nav-link" >Connect Wallet</NavLink>
+                        <Button className="nav-link" onClick={loadMetamask}>{ address }</Button>
                         </li>
                         <li className="nav-item">
                         <NavLink to="/Help"className="nav-link" >Help</NavLink>
