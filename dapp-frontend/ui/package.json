@@ -12,6 +12,7 @@
     "ahooks": "^2.5.0",
     "antd": "^3.26.17",
     "bootstrap": "^5.0.0-alpha1",
+    "ethers": "^5.0.21",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
