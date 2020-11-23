@@ -4,14 +4,17 @@ import { Tabs, Tab } from 'react-bootstrap';
 import Design from './Design';
 import Preview from './Preview';
 import "./Createsurvey.css";
-{/*import Result from './Result';*/}
+// import ipfs from "../ipfs";
+import Result from './Result';
 
 
 const Createsurvey = () => {
   const [key,setKey] = useState('Design');
+
   const handleSelect = (key: string) => (event: React.MouseEvent<HTMLButtonElement>) => {
     setKey(key) ;
   };
+
   return (
     <>
       <div className="my-5">
@@ -82,6 +85,9 @@ const Createsurvey = () => {
                     <br />
                   </Tab>
                   <Tab eventKey="See Results" title="See results">
+
+                    <Result address="valid" />
+                    <br/>
                     <button
                       type="button"
                       onClick={handleSelect('Preview')}
@@ -90,7 +96,7 @@ const Createsurvey = () => {
                       Back
                     </button>
 
-                   {/* <Result address={this.state.address} />*/}
+                    
                   </Tab>
                 </Tabs>
               </div>
