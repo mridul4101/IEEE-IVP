@@ -5,7 +5,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import Home from './component/Home/Home';
 import Allsurvey from './component/Allsurvey/Allsurvey';
 import Mysurvey from './component/Mysurvey/Mysurvey';
-import Connectwallet from './component/Connectwallet/Connectwallet';
+// import Connectwallet from './component/Connectwallet/Connectwallet';
 import Help from './component/Help/Help';
 import Navbar from './component/Navbar/Navbar';
 import Createsurvey from './component/Create/Createsurvey';
@@ -19,7 +19,7 @@ const App=()=> {
       <Route exact path="/" component={Home}/>
       <Route exact path="/allsurvey" component={Allsurvey}/>
       <Route exact path="/mysurvey" component={Mysurvey}/>
-      <Route exact path="/connectwallet" component={Connectwallet}/>
+      {/* <Route exact path="/connectwallet" component={Connectwallet}/> */}
       <Route exact path="/help" component={Help}/>
       <Route exact path="/Createsurvey" component={Createsurvey}/>
       <Redirect to="/"/>
