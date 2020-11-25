@@ -11,6 +11,7 @@
     "@types/react-dom": "^16.9.8",
     "ahooks": "^2.5.0",
     "antd": "^3.26.17",
+    "axios": "^0.21.0",
     "bootstrap": "^5.0.0-alpha1",
     "ethers": "^5.0.21",
     "ipfs-http-client": "^48.1.1",
