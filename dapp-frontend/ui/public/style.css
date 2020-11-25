@@ -1,11 +1,10 @@
 svg {
-  height: 130%;
+  height: 140%;
   display: block;
   position: absolute;
   left: 0;
   top: -100px;
   z-index: -1;
-  width: auto;
 }
 body {
   overflow-x: hidden;
@@ -15,46 +14,53 @@ body {
 #top .st48,
 #top .st52,
 #top .st50,
-#top .st32 {
-  animation: drift-right-up 80s alternate;
+#top .st32,
+#top .st0 {
+  animation: drift-right-up 38s alternate ease-in-out infinite !important;
 }
 #top .st33,
 #top .st51,
 #top .st25,
-#top .st46,
-#top .st8 {
-  animation: drift-right-up 75s alternate;
+#top .st46 {
+  animation: drift-right 175s alternate ease-in-out infinite !important;
 }
 #top .st49,
 #top .st42,
-#top .st16 {
-  animation: drift-right-up 65s alternate;
+#top .st1 {
+  animation: drift-right 50s alternate ease-in-out infinite !important;
 }
 
 #bottom .st11,
-#bottom .st56 {
-  animation: drift-down 70s alternate;
+#bottom .st56,
+#bottom .st8,
+#bottom .st16 {
+  animation: drift-down-right 120s alternate ease-in-out infinite !important;
 }
 #bottom .st53,
 #bottom .st54 {
-  animation: drift-right 195s alternate;
+  animation: drift-right 95s alternate ease-in-out infinite !important;
 }
 #bottom .st55,
 #bottom .st36,
 #bottom .st33,
-#bottom .st35 {
-  animation: drift-down 115s alternate;
+#bottom .st35,
+#bottom .st5,
+#bottom .st28 {
+  animation: drift-down-right 90s alternate ease-in-out infinite !important;
 }
 #bottom .st51,
 #bottom .st9,
 #bottom .st12 {
-  animation: drift-down-right 105s alternate;
+  animation: drift-right 120s alternate ease-in-out infinite !important;
 }
 
 #nearright .st40,
 #nearright .st43,
-#nearright .st33 {
-  animation: drift-right 115s;
+#nearright .st33,
+#nearright .st19,
+#nearright .st8,
+#nearright .st47 {
+  animation: drift-right 100s alternate ease-in-out infinite !important;
 }
 #nearright .st41,
 #nearright .st44,
@@ -62,14 +68,15 @@ body {
 #nearright .st15,
 #nearright .st24,
 #nearright .st20 {
-  animation: drift-right-up 105s;
+  animation: drift-right-up 39s alternate ease-in-out infinite !important;
 }
 #nearright .st42,
 #nearright .st45,
 #nearright .st46,
 #nearright .st55,
-#nearright .st47 {
-  animation: drift-right 135s;
+#nearright .st4,
+#nearright .st3 {
+  animation: drift-down-right 119s alternate ease-in-out infinite !important;
 }
 
 #farright .st54,
@@ -77,13 +84,15 @@ body {
 #farright .st59,
 #farright .st5,
 #farright .st37 {
-  animation: drift-right 55s;
+  animation: drift-down-right 30s infinite ease-in-out !important;
 }
 #farright .st57,
 #farright .st51,
 #farright .st6,
-#farright .st61 {
-  animation: drift-right-up 40s;
+#farright .st61,
+#farright .st6,
+#farright .s16 {
+  animation: drift-right 64s alternate infinite !important;
 }
 
 @keyframes drift-right {
@@ -98,12 +107,12 @@ body {
 }
 @keyframes drift-up {
   100% {
-    transform: translate(10px, -1450px);
+    transform: translate(10px, -450px);
   }
 }
 @keyframes drift-up-right {
   100% {
-    transform: translate(175px, -1550px);
+    transform: translate(175px, -550px);
   }
 }
 @keyframes drift-down {
@@ -115,4 +124,6 @@ body {
   100% {
     transform: translate(1450px, 320px);
   }
+}
+@media (max-width: 400px) {
 }

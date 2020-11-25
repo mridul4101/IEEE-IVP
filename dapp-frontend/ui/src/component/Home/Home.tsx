@@ -1,5 +1,4 @@
 import  React from "react";
-import './Home.css';
 import Homedata from "./Homedata";
 import Card from "../Card/Card";
 const Home=()=> {
@@ -7,7 +6,7 @@ const Home=()=> {
     <>
 
     <div className="my-5">
-        <h1 className="text-center">ABOUT</h1>
+        <h1 className="text-center "><b>ABOUT</b></h1>
       </div>
       <div className="container-fluid mb-5">
         <div className="row">

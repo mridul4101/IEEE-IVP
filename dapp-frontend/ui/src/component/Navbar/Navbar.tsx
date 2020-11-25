@@ -78,7 +78,7 @@ const Navbar =() =>{
                         <NavLink to="/" className="nav-link active" aria-current="page" >Home </NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink to="/Createsurvey" className="nav-link">Create survey</NavLink>
+                        <NavLink to="/Createsurvey" className="nav-link ">Create survey</NavLink>
                         </li>
                         <li className="nav-item">
                         <NavLink to="/Allsurvey" className="nav-link">All Survey</NavLink>
@@ -87,11 +87,12 @@ const Navbar =() =>{
                         <NavLink to="/Mysurvey" className="nav-link">My Survey</NavLink>
                         </li>
                         <li className="nav-item">
-                        <Button className="nav-link" onClick={loadMetamask}>{ address }</Button>
-                        </li>
-                        <li className="nav-item">
                         <NavLink to="/Help"className="nav-link" >Help</NavLink>
+                        </li> 
+                        <li className="nav-item">
+                        <Button className=" nav-link btn btn-info text-dark" onClick={loadMetamask}>{ address }</Button>
                         </li>
+                        
       
                         </ul>
     
