@@ -19,9 +19,8 @@ const App=()=> {
       <Route exact path="/" component={Home}/>
       <Route exact path="/allsurvey" component={Allsurvey}/>
       <Route exact path="/mysurvey" component={Mysurvey}/>
-      {/* <Route exact path="/connectwallet" component={Connectwallet}/> */}
-      <Route exact path="/help" component={Help}/>
       <Route exact path="/Createsurvey" component={Createsurvey}/>
+      <Route exact path="/help" component={Help}/>
       <Redirect to="/"/>
       <Home/>
     </Switch>

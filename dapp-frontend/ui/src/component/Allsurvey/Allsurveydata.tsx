@@ -10,7 +10,7 @@ const Allsurveydata=[
         
         title:"SURVEY 2 !! ",
         button:"VIEW SURVEY!",
-        description:" EDUCATION",
+        description:" EDUCATION ",
         links:"/",
     },
     {

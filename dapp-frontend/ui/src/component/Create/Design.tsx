@@ -33,7 +33,7 @@ function Design({ changeTab }) {
 
   return (
     <div>
-      <h3>Design Your Own Survey </h3>
+      <h3 className=" text-white" >Design Your Own Survey </h3>
       {/* <button className='btn btn-primary' onClick={()=> changeTab}></button> */}
       <Form style={{ borderLeft: '5px solid #4285F4' }} className="text-left bg-white p-4 rounded">
         <Form.Group>

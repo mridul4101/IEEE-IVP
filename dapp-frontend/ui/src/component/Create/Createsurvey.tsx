@@ -21,11 +21,11 @@ const Createsurvey = () => {
         <h1 className="text-center">CREATE SURVEY</h1>
       </div>
       <MapProvider>
-        <div className="survey mx-5">
+        <div className="survey mx-5 ">
           <div className="row w-100 ">
             
 
-            <div className="col-md-6 mx-auto bg-light p-4">
+            <div className=" col-md-8  mx-auto   p-4 bg-gradient-light border border-secondary rounded">
 
 
               <div className="tabs ">
@@ -35,11 +35,11 @@ const Createsurvey = () => {
                   transition={false}
                   id="noanim-tab-example"
                 >
-                  <Tab eventKey="Design" title="Design Survey">
+                  <Tab  eventKey="Design" title="Design Survey">
                     <button
                       type="button"
                       onClick={handleSelect('Preview')}
-                      className="btn btn-primary float-right"
+                      className="btn btn-primary  float-right"
                     >
                       {' '}
                       Preview
