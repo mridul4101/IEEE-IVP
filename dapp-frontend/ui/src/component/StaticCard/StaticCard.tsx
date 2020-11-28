@@ -1,6 +1,9 @@
 import  React from "react";
 import {NavLink} from "react-router-dom";
 import "./StaticCard.css" ;
+import { Timer } from '../Timer';
+
+
 const StaticCard=(props:any)=> {
   return (
     <>
@@ -9,10 +12,14 @@ const StaticCard=(props:any)=> {
         <div className="row">
         <div className="cardtop ">
             <div className="card-body border border-secondary rounded">
-              <h5 className="card-title">{props.title}</h5>
-              <h6 className="card-text" >{props.description}</h6>
-              
-              <NavLink to={props.links} className="btn btn-outline-info">{props.button}</NavLink>
+                {
+                    (props.time > Date.now()/1000) ? <Timer time={props.time}/> : null
+                }
+                <h5 className="card-title">{props.title}</h5>
+                {/* <h6 className="card-text" >{props.description}</h6> */}
+                <NavLink to={props.link1} className="btn btn-outline-info">{props.button1}</NavLink>
+                <br/><br/>
+                <NavLink to={props.link2} className="btn btn-outline-info">{props.button2}</NavLink>
             </div>
         </div>
         </div>
