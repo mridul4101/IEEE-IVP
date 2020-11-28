@@ -90,7 +90,7 @@ function Result() {
           console.log('TXN Hash :', sur);
           Swal.fire({
             icon: 'success',
-            title: 'Oops...',
+            title: 'Done...',
             text: 'You have added users',
           });
 
@@ -168,18 +168,14 @@ function Result() {
                     style={{ borderLeft: '5px solid #4285F4'}}
                     className="text-left bg-white p-5 rounded"
                   >
-                    <h3 className="text-dark"> Add people</h3>
-                    <hr />
-                    <p>This is private Survey. You have to Add Participants</p><hr/>
+                    <h4>Add users to be authorised for this survey.</h4>
+                    <hr/>
 
                     <Row>
                       <Col>
-                        <button className="btn btn-primary">Add CSV File </button>
-                        <br/>
-                        <h4 className='text-center'>OR</h4> 
-                        <br/>
-                        <div className="form-group row">
-                          <input className="form-control col-8 m-3" name="user" value={temp} onChange={handleChange}/>
+                        <div className="form-group column">
+                          <input className="form-control col-8" name="user" placeholder="Enter address of user to be authorised" value={temp} onChange={handleChange}/>
+                          <br/>
                           <button className="btn btn-primary border bordercircle" onClick={addAddress}> <i className="fa fa-plus m-0" aria-hidden="true"></i></button>
                         </div>                
                       </Col>
@@ -193,7 +189,7 @@ function Result() {
                             ))
                           }
                         </ul>
-                        <button className="btn btn-primary" onClick={addUser}>Authorize Above users for this servey</button>
+                        <button className="btn btn-primary" onClick={addUser}>Authorize above users for this survey</button>
                       </Col>
                     </Row>
                   </div>
@@ -203,10 +199,8 @@ function Result() {
 
               <br/>
               <br/>
-              {/* <br/>
-              <br/> */}
 
-              <h2 className="text-center" style={{color: "black"}}>Total Responses : {totalResponse}</h2>
+              <h2 className="text-center" style={{color: "black"}}>Total Responses: {totalResponse}</h2>
               <div style={{ maxWidth: '800px' }} className="mx-auto">
 
                 <div
