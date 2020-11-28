@@ -56,9 +56,10 @@ contract SurveyManager
         require(surveys[_survey].time >= block.timestamp, "Survey has Ended");
         if (surveys[_survey].isPublic == false) 
         {
-            require(access[_survey][msg.sender] != 1, "You have no access for this survey");
+            require(access[_survey][msg.sender] == 1, "You have no access for this survey");
         }
         require(access[_survey][msg.sender] != 2, "You have already voted  for this survey");
+
         emit SentSurvey(_survey, _feedback);
         access[_survey][msg.sender] = 2;
     }
