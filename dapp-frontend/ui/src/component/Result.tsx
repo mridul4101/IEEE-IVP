@@ -219,7 +219,7 @@ function Result() {
                       style={{ borderLeft: '5px solid #4285F4' }}
                       className="text-left bg-white my-3 p-5 rounded"
                       >
-                        <h6><span className="badge badge-pill badge-primary mr-2">Q : {index + 1}</span>{ele.question}</h6>
+                        <h6><span className="badge badge-pill badge-primary mr-2" style={{color: "black"}}>Q : {index + 1}</span>{ele.question}</h6>
                         <HorizontalBar data={
                           {labels: ele.options,
                           datasets: [
