@@ -1,0 +1,48 @@
+
+.footer_timer{
+  max-width: 250px;
+}
+.footer_timer #clockdiv {
+  font-family: sans-serif;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  font-size: calc((12vw)/10);
+  font-weight: 800;
+  text-align: center;
+
+}
+
+.footer_timer #clockdiv > div {
+  padding: 10px;
+  display: inline-block;
+}
+.setpadding {
+  font-size: 1.4em;
+  padding-top: 3%;
+}
+#clockdiv div > span {
+  border-radius: 5px;
+  background: #005099;
+  color: inherit;
+  font-size: inherit;
+  margin: 0 5px;
+  padding: 3px 6px;
+  display: inline-block;
+}
+
+.footer_timer .smalltext {
+  /* padding-top: 5px; */
+  font-size: calc((12vw)/15);
+  font-weight: 600;
+  color: #005099;
+}
+
+
+.dot_time {
+  color: #005099;
+  padding: 0;
+  margin: 0;
+  margin: 0 -11px;
+}
+
