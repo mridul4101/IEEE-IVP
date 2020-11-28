@@ -8,7 +8,8 @@ import Mysurvey from './component/Mysurvey/Mysurvey';
 import Help from './component/Help/Help';
 import Navbar from './component/Navbar/Navbar';
 import Createsurvey from './component/Create/Createsurvey';
-// import Surveys from './component/Surveys';
+import Surveys from './component/Surveys';
+import Result from './component/Result';
 import './App.css';
 
 const App=()=> {
@@ -21,7 +22,8 @@ const App=()=> {
       <Route exact path="/mysurvey" component={Mysurvey}/>
       <Route exact path="/help" component={Help}/>
       <Route exact path="/Createsurvey" component={Createsurvey}/>
-      {/* <Route exact path="/SurveyDetail" component={Surveys}/> */}
+      <Route exact path="/SurveyDetail/:SurveyHash" component={Surveys}/>
+      <Route path="/Result/:SurveyHash" component={Result} />
       <Redirect to="/"/>
       <Home/>
     </Switch>
