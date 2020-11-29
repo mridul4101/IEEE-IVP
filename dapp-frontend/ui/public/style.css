@@ -92,7 +92,7 @@ body {
 #farright .st61,
 #farright .st6,
 #farright .s16 {
-  animation: drift-right 64s alternate infinite !important;
+  animation: drift-right 64s alternate infinite ease-in-out !important;
 }
 
 @keyframes drift-right {

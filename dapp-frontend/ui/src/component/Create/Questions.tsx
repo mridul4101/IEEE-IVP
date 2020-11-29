@@ -19,7 +19,7 @@ const Card = (props: CardProps) => {
 
   return (
     <div
-      style={{ borderLeft: '5px solid #4285F4' }}
+      
       className="bg-white rounded my-3 px-5 py-3  text-left "
     >
       <Icon style={{ cursor: 'move', marginRight: 8 }} type="drag" />
@@ -123,6 +123,8 @@ export default Form.create()((props: FormComponentProps) => {
       <div>
         <br />
         <br />
+        <br/>
+       
 
         <Button
           onClick={() => {
@@ -134,6 +136,7 @@ export default Form.create()((props: FormComponentProps) => {
             setMapState({ type: 'setFeatureRef', payload: { question: sortedResult } });
           }}
         >
+      
           Save
         </Button>
         {/* <div>

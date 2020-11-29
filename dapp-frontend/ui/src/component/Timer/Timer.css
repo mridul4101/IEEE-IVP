@@ -1,5 +1,4 @@
-
-.footer_timer{
+.footer_timer {
   max-width: 250px;
 }
 .footer_timer #clockdiv {
@@ -7,10 +6,9 @@
   color: #ffffff;
   display: inline-block;
   text-align: center;
-  font-size: calc((12vw)/10);
+  font-size: calc((12vw) / 10);
   font-weight: 800;
   text-align: center;
-
 }
 
 .footer_timer #clockdiv > div {
@@ -33,16 +31,14 @@
 
 .footer_timer .smalltext {
   /* padding-top: 5px; */
-  font-size: calc((12vw)/15);
+  font-size: calc((12vw) / 15);
   font-weight: 600;
-  color: #005099;
+  color: white;
 }
 
-
 .dot_time {
-  color: #005099;
+  color: white;
   padding: 0;
   margin: 0;
   margin: 0 -11px;
 }
-

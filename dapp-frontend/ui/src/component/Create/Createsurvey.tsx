@@ -45,6 +45,7 @@ const Createsurvey = () => {
                       Preview
                     </button>
                     <Design changeTab={handleSelect} />
+                    
                     <button
                       type="button"
                       onClick={handleSelect('Preview')}

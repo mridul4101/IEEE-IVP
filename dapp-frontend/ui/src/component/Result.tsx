@@ -146,11 +146,13 @@ function Result() {
   }, [spin]);
 
   return (
-    <div className="bg-light">
+    <>
+    <div className=" m-4 ">
       {
         spin ? (
-          <div className="preloader">
-            <Spinner className="loader" animation="border" variant="primary" />
+          
+          <div className="preloader" >
+            <Spinner className="loader" animation="border" variant="primary" role="status"/>
           </div>
         ) : null
       }
@@ -158,17 +160,17 @@ function Result() {
       {
         exist ? (
           <>
-              <br/><br/>
+              <br/>
 
-              <h1 style={{color: "black"}}>Analysis of Survey Result</h1>
+              <h1 style={{color: "white"}}>Analysis of Survey Result</h1>
 
               {
                 isprivate ? <div style={{ maxWidth: '800px' }} className="mx-auto">
                   <div
-                    style={{ borderLeft: '5px solid #4285F4'}}
+                    
                     className="text-left bg-white p-5 rounded"
                   >
-                    <h4>Add users to be authorised for this survey.</h4>
+                    <h4 style={{color: "black"}}> Add users to be authorised for this survey.</h4>
                     <hr/>
 
                     <Row>
@@ -198,13 +200,13 @@ function Result() {
               }
 
               <br/>
-              <br/>
+            
 
-              <h2 className="text-center" style={{color: "black"}}>Total Responses: {totalResponse}</h2>
+              <h2 style={{color: "white"}} className="text-center" >Total Responses: {totalResponse}</h2>
               <div style={{ maxWidth: '800px' }} className="mx-auto">
 
                 <div
-                  style={{ borderLeft: '5px solid #4285F4' }}
+                  
                   className="text-left bg-white p-5 rounded"
                 >
                   <h3 className="text-dark"> {newSurvey.Title} </h3>
@@ -216,10 +218,10 @@ function Result() {
                   {
                     newSurvey.question.map((ele, index) => (
                       <div
-                      style={{ borderLeft: '5px solid #4285F4' }}
+                      
                       className="text-left bg-white my-3 p-5 rounded"
                       >
-                        <h6><span className="badge badge-pill badge-primary mr-2" style={{color: "black"}}>Q : {index + 1}</span>{ele.question}</h6>
+                        <h6><span className="badge badge-pill badge-primary mr-2 text-dark" >Q : {index + 1}</span>{ele.question}</h6>
                         <HorizontalBar data={
                           {labels: ele.options,
                           datasets: [
@@ -248,6 +250,7 @@ function Result() {
         )
       }
     </div>
+    </>
   );
 }
 

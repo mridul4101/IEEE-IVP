@@ -112,11 +112,13 @@ export default function Result ({ address })
       <br />
       <Card>
         <Card.Body>
-          <Card.Title>Complete your Survey</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">Are you Sure</Card.Subtitle>
-          <Card.Text>you are connected with address {address}</Card.Text>
+          {/* <Card.Title>Complete Building Your Survey</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">Are You Sure ?</Card.Subtitle> */}
+          {/* <Card.Text className="text-dark"> You are connected with address {address}</Card.Text> */}
           {isSubmit ? null : (
             <>
+              <Card.Title>Complete Building Your Survey</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">Are You Sure ?</Card.Subtitle>
               <Card.Link className="mr-5" href="./home">
                 No
               </Card.Link>
@@ -130,8 +132,10 @@ export default function Result ({ address })
           {
             spin ? (
               <>
+                <div className="preloader" >
                 <Spinner animation="border" variant="primary" />
                 <Card.Text>Please wait ...</Card.Text>
+                </div>
               </>
             ) : null
           }

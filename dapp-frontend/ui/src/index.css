@@ -10,3 +10,9 @@ body {
 
   font-weight: 500 !important;
 }
+.preloader {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}

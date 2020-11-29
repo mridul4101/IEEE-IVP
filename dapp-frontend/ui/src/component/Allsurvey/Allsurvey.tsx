@@ -47,7 +47,7 @@ export default function AllSurvey() {
     (async () => {
       await getSurvey();
     })();
-  });
+  }, []);
 
   const searchbox = {
     border : "none",
@@ -61,13 +61,13 @@ export default function AllSurvey() {
       <div className="my-5">
         <h1 className="text-center">ALL SURVEYS</h1>
       </div>
-
+       <hr style={{ color:"white"}}/>
 
       <div className="container">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
-            <h3 style={{color: "white"}}>Public Survey(s) (Live)</h3>
+            <h3 style={{color: "white",textAlign:"center",margin:"10px"}}>Public Survey(s) (Live)</h3>
           </div>
         </div>
           
@@ -79,12 +79,12 @@ export default function AllSurvey() {
           }{' '}      
         </div>
       </div>
-
+      <hr style={{ color:"white"}}/>
       <div className="container">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
-            <h3 style={{color: "white"}}>Public Survey(s) (Finished)</h3>
+            <h3 style={{color: "white",textAlign:"center",margin:"10px"}}>Public Survey(s) (Finished)</h3>
           </div>
         </div>
           
@@ -97,12 +97,12 @@ export default function AllSurvey() {
         </div>
       </div>
 
-
+          <hr style={{ color:"white"}}/>
       <div className="container">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
-            <h3 style={{color: "white"}}>Private Survey(s) (Live)</h3>
+            <h3 style={{color: "white",textAlign:"center",margin:"10px"}}>Private Survey(s) (Live)</h3>
           </div>
         </div>
           
@@ -114,12 +114,12 @@ export default function AllSurvey() {
           }{' '}      
         </div>
       </div>
-
+      <hr style={{ color:"white"}}/>
       <div className="container">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
-            <h3 style={{color: "white"}}>Private Survey(s) (Finished)</h3>
+            <h3 style={{color: "white",textAlign:"center",margin:"10px"}}>Private Survey(s) (Finished)</h3>
           </div>
         </div>
           
@@ -131,6 +131,7 @@ export default function AllSurvey() {
           }{' '}      
         </div>
       </div>
+       <hr style={{ color:"white"}}/>
     </>
   )
 }

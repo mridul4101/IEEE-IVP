@@ -11,7 +11,7 @@ type CardProps = {
 function Question(props: CardProps) {
   return (
     <div
-      style={{ borderLeft: '5px solid #4285F4' }}
+      
       className="text-left bg-white my-3 p-4 rounded"
     >
       <h6>
@@ -39,7 +39,7 @@ export default function Preview({ Next }) {
   const { question } = mapState;
   return (
     <div>
-      <div style={{ borderLeft: '5px solid #4285F4' }} className="text-left bg-white p-4 rounded">
+      <div  className="text-left bg-white p-4 rounded">
         <h3 className="text-dark"> {mapState.Title} </h3>
         <hr />
         <ReactMarkdown source={mapState.description} escapeHtml={false} />

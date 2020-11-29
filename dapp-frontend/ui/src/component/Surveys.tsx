@@ -38,11 +38,11 @@ const initialState: SurveyData = {
 function Question(props: CardProps) {
   return (
     <div
-      style={{ borderLeft: '5px solid #4285F4' }}
+      
       className="text-left bg-white my-3 p-5 rounded"
     >
       <h6>
-        <span className="badge badge-pill badge-primary mr-2">Q : {props.index + 1}</span>
+        <span className="badge badge-pill badge-primary mr-2 text-dark">Q : {props.index + 1}</span>
         {props.name}
       </h6>
       <Form.Group>
@@ -136,7 +136,7 @@ function Surveys() {
   }, [spin]);
 
     return (
-        <div className="bg-light">
+        <div className="mx-5 ">
             {
                 spin ? (
                 <div className="preloader">
@@ -148,12 +148,12 @@ function Surveys() {
                 exist ? (
                     <>
                       {
-                        (timeLeft > Date.now()/1000) ? <Timer time={timeLeft} /> : <div className="text-center">Survey Time Over!!</div>
+                        (timeLeft > Date.now()/1000) ? <Timer time={timeLeft} /> : <div className="text-center" style={{color:"white"}}>Survey Time Over!!</div>
                       }
                         {/* <Timer time={timeLeft} /> */}
                         <div style={{ maxWidth: '800px' }} className="mx-auto">
                             <div
-                                style={{ borderLeft: '5px solid #4285F4' }}
+                               
                                 className="text-left bg-white p-5 rounded"
                             >
                                 <h3 className="text-dark"> {newSurvey.Title} </h3>
