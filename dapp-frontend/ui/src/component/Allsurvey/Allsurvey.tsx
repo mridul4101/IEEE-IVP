@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Timer } from '../Timer';
 
 export default function AllSurvey() {
-  // const [allSurvey, setAllSurvey] = useState([]);
+
   const [allPublic, setAllPublic] = useState([]);
   const [allPrivate, setAllPrivate] = useState([]);
 
@@ -61,7 +61,7 @@ export default function AllSurvey() {
       <div className="my-5">
         <h1 className="text-center">ALL SURVEYS</h1>
       </div>
-       <hr style={{ color:"white"}}/>
+      <hr style={{ color:"white"}}/>
 
       <div className="container">
 

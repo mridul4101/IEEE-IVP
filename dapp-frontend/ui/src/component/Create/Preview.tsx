@@ -8,6 +8,7 @@ type CardProps = {
   name: string;
   option: string[];
 };
+
 function Question(props: CardProps) {
   return (
     <div

@@ -31,32 +31,42 @@ const Card = (props: CardProps) => {
         aria-hidden="true"
       ></i>
       <i className="fa fa-clone" style={{ marginLeft: 8, float: 'right', fontSize: '1.5em' }}></i>
-      <Form.Item>
-        {props.form.getFieldDecorator(`params[${props.index}].question`, {
-          initialValue: props.name,
-        })(<Input placeholder="Please enter group Question" />)}
-      </Form.Item>
-      <Form.Item label="Options : ">
-        {list.map((ele, index) => (
-          <div key={getKey(index)}>
-            <input style={{ margin: '8px' }} type="radio" />
-            {props.form.getFieldDecorator(`params[${props.index}].options[${getKey(index)}]`, {
-              initialValue: ele,
-            })(<Input style={{ width: '80%' }} placeholder="Please enter the option" />)}
-            <i className="fa fa-minus-circle"
-              style={{ marginLeft: 8 }}
-              onClick={() => {
-                remove(index);
-              }}
-            />
 
-            <i className="fa fa-plus-circle"
-              style={{ marginLeft: 8 }}
-              onClick={() => insert(index + 1, '')}
-            />
-          </div>
-        ))}
+      <Form.Item>
+        {
+          props.form.getFieldDecorator(`params[${props.index}].question`, {
+            initialValue: props.name,
+          }) (<Input placeholder="Please enter group Question" />)
+        }
       </Form.Item>
+
+      <Form.Item label="Options : ">
+        {
+          list.map((ele, index) => (
+            <div key={getKey(index)}>
+              <input style={{ margin: '8px' }} type="radio" />
+              {
+                props.form.getFieldDecorator(`params[${props.index}].options[${getKey(index)}]`, {
+                  initialValue: ele,
+                }) (<Input style={{ width: '80%' }} placeholder="Please enter the option" />)
+              }
+
+              <i className="fa fa-minus-circle"
+                style={{ marginLeft: 8 }}
+                onClick={() => {
+                  remove(index);
+                }}
+              />
+
+              <i className="fa fa-plus-circle"
+                style={{ marginLeft: 8 }}
+                onClick={() => insert(index + 1, '')}
+              />
+            </div>
+          ))
+        }
+      </Form.Item>
+
       <Button
         block
         type="dashed"
@@ -136,12 +146,8 @@ export default Form.create()((props: FormComponentProps) => {
             setMapState({ type: 'setFeatureRef', payload: { question: sortedResult } });
           }}
         >
-      
           Save
         </Button>
-        {/* <div>
-          <pre className="text-left">{result}</pre>
-        </div> */}
       </div>
     </div>
   );

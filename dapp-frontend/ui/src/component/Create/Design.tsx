@@ -13,17 +13,21 @@ type State = {
 };
 
 function Design({ changeTab }) {
+
   const textRef = useRef<any>();
   const [state, setState] = useState<State>({
     Title: '',
     time: '',
     isPublic: 'false',
   });
+
   const { mapState, setMapState } = useMapState();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setState({ ...state, [e.target.name]: e.target.value });
     setMapState({ type: 'setFeatureRef', payload: { [e.target.name]: e.target.value } });
   };
+  
   const handleChange1 = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setState({ ...state, [e.target.name]: e.target.value });
     setMapState({ type: 'setFeatureRef', payload: { [e.target.name]: e.target.value } });

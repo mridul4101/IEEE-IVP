@@ -5,6 +5,7 @@ interface Q {
   question: string;
   options: string[];
 }
+
 type MapState = {
   Title?: string;
   description?: string;
@@ -21,6 +22,7 @@ type MapActions =
   | {
       type: 'resetFeatureRef';
     };
+
 const initialState: MapState = {
   Title: '',
   description: '',
@@ -28,6 +30,7 @@ const initialState: MapState = {
   isPublic: false,
   question: [{ question: '', options: [] }],
 };
+
 // By setting the typings here, we ensure we get intellisense in VS Code
 const initialMapContext: { mapState: MapState; setMapState: React.Dispatch<MapActions> } = {
   mapState: initialState,
@@ -57,6 +60,7 @@ const reducer = (state: MapState, action: MapActions) => {
       return state;
   }
 };
+
 interface MapProviderProps {
   children?: ReactNode;
 }
