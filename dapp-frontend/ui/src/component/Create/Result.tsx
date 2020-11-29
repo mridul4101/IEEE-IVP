@@ -62,13 +62,26 @@ export default function Result ({ address })
         setDone(true);
       } catch (e) {
         let add = await window.wallet.getAddress();
+        var err="";
+        if(e?.message?.includes("you have already build a Survey with this name"))
+          err = "You have already built a survey with this name.";
+        else
+          err = e;
         Swal.fire({
           icon: 'error',
           title: 'Oops...', 
-          text: `Something went wrong`,
+          text: `${err}`,
         });
         setisSubmit(false);
       }
+    }
+    else
+    {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please Connect to wallet!',
+      });
     }
     setSpin(false);
   };

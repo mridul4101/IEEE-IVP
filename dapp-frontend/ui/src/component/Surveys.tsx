@@ -91,38 +91,64 @@ function Surveys() {
   };
 
   const Submit = async () => {
-    const answer = [];
-    for (let i in ans) {
-      answer.push(ans[i]);
-    }
-    console.log(answer);
-    try {
-      const A = await window.surveyInstance.connect(window.wallet).sendSurvey(SurveyHash, answer);
-      await A.wait();
-      console.log(A);
-      // alert("You have Submit your Survey");
-      Swal.fire('Good job!', '"You have Submit your Survey', 'success');
-    } catch (e) { 
-      const add = await window.wallet.getAddress();
-      const x = new ethers.VoidSigner(add, window.provider);
+    if(window.wallet)
+    {
+      const answer = [];
+      for (let i in ans) {
+        answer.push(ans[i]);
+      }
+      console.log(answer);
       try {
-        const A = await window.surveyInstance.connect(x).estimateGas.sendSurvey(SurveyHash, answer);
+        const A = await window.surveyInstance.connect(window.wallet).sendSurvey(SurveyHash, answer);
+        await A.wait();
         console.log(A);
-      } catch (e) {
-        console.log('Error is : ', e);
-      
+        // alert("You have Submit your Survey");
+        Swal.fire('Good job!', '"You have Submit your Survey', 'success');
+      } catch (e) { 
+        const add = await window.wallet.getAddress();
+        const x = new ethers.VoidSigner(add, window.provider);
+        try {
+          const A = await window.surveyInstance.connect(x).estimateGas.sendSurvey(SurveyHash, answer);
+          console.log(A);
+        } catch (e) {
+          console.log('Error is : ', e);
+          
+          var err="";
+          if(e?.message?.includes("You have already voted  for this survey"))
+            err = "You have already voted for this survey.";
+          else if(e?.message?.includes("You have no access for this survey"))
+            err = "You are not authorised to take part in this survey.";
+          else if(e?.message?.includes("Survey has Ended"))
+            err = "Survey has ended.";
+          else
+            err = e;
+
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...', 
+            text: `${err}`,
+          });
+          // console.log(e?.message?.includes("You have already voted  for this survey")); 
+        } 
+      }
+    }
+    else
+    {
       Swal.fire({
         icon: 'error',
-        title: 'Oops...', 
-        text: `${e}`,
+        title: 'Oops...',
+        text: 'Please Connect to wallet!',
       });
-      console.log(e); 
-    } }
+    }
   };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     Submit();
   };
+
+
   useEffect(() => {
     (async () => {
       try {
