@@ -1,14 +1,515 @@
-svg {
-  height: 140%;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: -100px;
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  vertical-align: top;
+  overflow: hidden;
   z-index: -1;
 }
+.svg-content {
+  display: inline-block;
+  position: absolute;
+}
+svg {
+  height: 140%;
+  display: inline-block;
+  position: fixed;
+  left: 1px;
+  top: -80px;
+  /* z-index: -1; */
+}
+
 body {
+  background: black !important;
+  z-index: -1;
   overflow-x: hidden;
   max-width: 100%;
+}
+
+.st0 {
+  opacity: 0.6;
+  fill: #31a8c0;
+}
+
+.st1 {
+  opacity: 0.5;
+  fill: #04738a;
+}
+
+.st2 {
+  opacity: 0.8;
+  fill: #03496a;
+}
+
+.st3 {
+  opacity: 0.4;
+  fill: #0f97a1;
+}
+
+.st4 {
+  opacity: 0.2;
+  fill: #157c96;
+}
+
+.st5 {
+  opacity: 0.5;
+  fill: #0e5767;
+}
+
+.st6 {
+  opacity: 0.5;
+  fill: #46c1c6;
+}
+
+.st7 {
+  opacity: 0.5;
+  fill: #6aaecc;
+}
+
+.st8 {
+  opacity: 0.8;
+  fill: #24898e;
+  stroke: #24898e;
+  stroke-miterlimit: 10;
+}
+
+.st9 {
+  opacity: 0.6;
+  fill: #06546f;
+}
+
+.st10 {
+  opacity: 0.2;
+  fill: #3d9fbe;
+}
+
+.st11 {
+  opacity: 0.2;
+  fill: #064c6a;
+}
+
+.st12 {
+  opacity: 0.7;
+  fill: #047080;
+  stroke: #24898e;
+  stroke-miterlimit: 10;
+}
+
+.st13 {
+  opacity: 0.6;
+  fill: #0c638b;
+}
+
+.st14 {
+  opacity: 0.5;
+  fill: #106068;
+}
+
+.st15 {
+  opacity: 0.5;
+  fill: #1a737c;
+}
+
+.st16 {
+  opacity: 0.5;
+  fill: #1a8799;
+}
+
+.st17 {
+  opacity: 0.5;
+  fill: #1a848e;
+}
+
+.st18 {
+  opacity: 0.5;
+  fill: #5fc6c7;
+}
+
+.st19 {
+  opacity: 0.5;
+  fill: #0f5c63;
+}
+
+.st20 {
+  opacity: 0.5;
+  fill: #2694a0;
+}
+
+.st21 {
+  opacity: 0.5;
+  fill: #0a6481;
+}
+
+.st22 {
+  opacity: 0.5;
+  fill: #57b9cf;
+}
+
+.st23 {
+  opacity: 0.5;
+  fill: #0b526c;
+}
+
+.st24 {
+  opacity: 0.5;
+  fill: #0f7f8a;
+}
+
+.st25 {
+  opacity: 0.5;
+  fill: #11636c;
+}
+
+.st26 {
+  opacity: 0.5;
+  fill: #0b8898;
+}
+
+.st27 {
+  opacity: 0.8;
+  fill: #0b676a;
+}
+
+.st28 {
+  opacity: 5e-2;
+  fill: #1b9ba1;
+  stroke: #24898e;
+  stroke-miterlimit: 10;
+}
+
+.st29 {
+  opacity: 0.5;
+  fill: #208899;
+}
+
+.st30 {
+  opacity: 0.5;
+  fill: #279aa6;
+}
+
+.st31 {
+  opacity: 0.5;
+  fill: #167383;
+}
+
+.st32 {
+  opacity: 0.5;
+  fill: #2a9aa6;
+}
+
+.st33 {
+  opacity: 0.5;
+  fill: #1c8e78;
+}
+
+.st0 {
+  opacity: 0.5;
+  fill: #106068;
+}
+
+.st1 {
+  opacity: 0.5;
+  fill: #1a737c;
+}
+
+.st2 {
+  opacity: 0.5;
+  fill: #1a8799;
+}
+
+.st3 {
+  opacity: 0.5;
+  fill: #5fc6c7;
+}
+
+.st4 {
+  opacity: 0.5;
+  fill: #1a848e;
+}
+
+.st5 {
+  opacity: 0.5;
+  fill: #208899;
+}
+
+.st6 {
+  opacity: 0.5;
+  fill: #279aa6;
+}
+
+.st7 {
+  opacity: 0.5;
+  fill: #0f5c63;
+}
+
+.st8 {
+  opacity: 0.5;
+  fill: #2694a0;
+}
+
+.st9 {
+  opacity: 0.5;
+  fill: #167383;
+}
+
+.st10 {
+  opacity: 0.5;
+  fill: #2a9aa6;
+}
+
+.st11 {
+  opacity: 0.5;
+  fill: #1c8e78;
+}
+
+.st12 {
+  opacity: 0.5;
+  fill: #137260;
+  stroke: #24898e;
+  stroke-miterlimit: 10;
+}
+
+.st13 {
+  opacity: 0.3;
+  fill: #6ebece;
+}
+
+.st14 {
+  opacity: 0.3;
+  fill: #04738a;
+}
+
+.st15 {
+  opacity: 0.3;
+  fill: #03496a;
+}
+
+.st16 {
+  opacity: 0.5;
+  fill: #0a6481;
+}
+
+.st17 {
+  opacity: 0.5;
+  fill: #57b9cf;
+}
+
+.st18 {
+  opacity: 0.5;
+  fill: #45b3c5;
+}
+
+.st19 {
+  opacity: 0.5;
+  fill: #0b526c;
+}
+
+.st20 {
+  opacity: 0.5;
+  fill: #0f7f8a;
+}
+
+.st21 {
+  opacity: 0.5;
+  fill: #11636c;
+}
+
+.st22 {
+  opacity: 0.5;
+  fill: #0b8898;
+}
+
+.st23 {
+  opacity: 0.3;
+  fill: #0b676a;
+}
+
+.st24 {
+  opacity: 0.3;
+  fill: #0f97a1;
+}
+
+.st25 {
+  opacity: 0.3;
+  fill: #10596b;
+}
+
+.st26 {
+  opacity: 0.3;
+  fill: #0e5767;
+}
+
+.st27 {
+  opacity: 0.3;
+  fill: #64bfbf;
+}
+
+.st28 {
+  opacity: 0.3;
+  fill: #2b8383;
+}
+
+.st29 {
+  opacity: 0.3;
+  fill: #46c1c6;
+}
+
+.st30 {
+  opacity: 0.3;
+  fill: #206462;
+}
+
+.st31 {
+  opacity: 0.5;
+  fill: #46c1c6;
+}
+
+.st32 {
+  opacity: 0.5;
+  fill: #6aaecc;
+}
+
+.st33 {
+  opacity: 0.3;
+  fill: #24898e;
+  stroke: #24898e;
+  stroke-miterlimit: 10;
+}
+
+.st34 {
+  opacity: 5e-2;
+  fill: #24898e;
+  stroke: #118288;
+  stroke-miterlimit: 10;
+}
+
+.st35 {
+  opacity: 0.3;
+  fill: #06546f;
+}
+
+.st36 {
+  opacity: 0.3;
+  fill: #3d9fbe;
+}
+
+.st37 {
+  opacity: 0.3;
+  fill: #064c6a;
+}
+
+.st38 {
+  opacity: 0.3;
+  fill: #047080;
+}
+
+.st39 {
+  opacity: 0.3;
+  fill: #0c638b;
+}
+
+.st40 {
+  opacity: 0.35;
+  fill: #1a737c;
+}
+
+.st41 {
+  opacity: 0.3;
+  fill: #2e8887;
+}
+
+.st42 {
+  opacity: 0.3;
+  fill: #08838b;
+}
+
+.st43 {
+  opacity: 0.34;
+  fill: #42b0a3;
+}
+
+.st44 {
+  opacity: 0.5;
+  fill: #128172;
+}
+
+.st45 {
+  opacity: 0.35;
+  fill: #0d90a1a2;
+  stroke: #24898e;
+  stroke-miterlimit: 10;
+}
+
+.st46 {
+  opacity: 0.5;
+  fill: #24898e;
+}
+
+.st47 {
+  opacity: 0.3;
+  fill: #6cc0ba;
+}
+
+.st48 {
+  opacity: 0.3;
+  fill: #3896ba;
+}
+
+.st49 {
+  opacity: 0.5;
+  fill: #086a73;
+}
+
+.st50 {
+  opacity: 0.35;
+  fill: #0781a0;
+}
+
+.st51 {
+  opacity: 0.33;
+  fill: rgb(7, 103, 110) 666;
+  stroke: #24898e;
+  stroke-miterlimit: 10;
+}
+
+.st52 {
+  opacity: 0.3;
+  fill: #0a6d75;
+}
+
+.st53 {
+  opacity: 0.3;
+  fill: #0c8270;
+}
+
+.st54 {
+  opacity: 0.3;
+  fill: #4db5b9;
+}
+
+.st55 {
+  opacity: 0.3;
+  fill: #1a737c;
+}
+
+.st56 {
+  opacity: 0.5;
+  fill: #0ca181;
+}
+
+.st57 {
+  opacity: 0.35;
+  fill: #328488;
+}
+
+.st58 {
+  opacity: 0.34;
+  fill: #06938e;
+}
+
+.st59 {
+  opacity: 0.37;
+  fill: #105756;
 }
 
 #top .st48,
@@ -124,6 +625,4 @@ body {
   100% {
     transform: translate(1450px, 320px);
   }
-}
-@media (max-width: 400px) {
 }
