@@ -1,7 +1,7 @@
 .card-container {
   perspective: 1000px;
   height: 320px;
-  width: 250px;
+  width: 280px;
 }
 .cards {
   transition: transform 0.8s;

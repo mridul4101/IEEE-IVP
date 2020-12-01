@@ -11,12 +11,10 @@ type CardProps = {
 
 function Question(props: CardProps) {
   return (
-    <div
-      
-      className="text-left  my-3 p-4 rounded"
+    <div className="text-left bg-white my-3 p-4 rounded"
     >
       <h6>
-        <span className="badge badge-pill badge-primary mr-2">Q : {props.index + 1}</span>
+        <span className="text-dark badge badge-pill badge-primary mr-2">Q : {props.index + 1}</span>
         {props.name}
       </h6>
       <Form.Group>
