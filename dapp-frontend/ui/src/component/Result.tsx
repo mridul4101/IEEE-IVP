@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import {HorizontalBar} from 'react-chartjs-2';
 import { ethers } from 'ethers';
 import Swal from 'sweetalert2';
+import Data from './database.json';
 
 interface Q {
   question: string;
@@ -36,14 +37,14 @@ const getResult = async (id) => {
   const logs = await window.surveyInstance.queryFilter(filter);
   const parseLogs = logs.map((log) => window.surveyInstance.interface.parseLog(log));
   const surveyAll = parseLogs.map((ele) => ele.args[1]);
-  console.log('Result :', surveyAll);
+  // console.log('Result :', surveyAll);
   totalResponse = surveyAll.length;
   for(const i of surveyAll){
     for(const j in i){
       DeclareResult[j][i[j]] = DeclareResult[j][i[j]] + 1;
     }
   }
-  console.log(DeclareResult);
+  // console.log(DeclareResult);
   return surveyAll;
 };
 
@@ -52,42 +53,54 @@ function Result() {
   const [exist, setExist] = useState<boolean>(true);
   const [spin, setSpin] = useState<boolean>(true);
   const [newSurvey, setNewSurvey] = useState<SurveyData>(initialState);
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState("None")
+  const [userId, setUserId] = useState([]);
+  const [userEmail, setUserEmail] = useState([]);
   const [temp, setTemp] = useState("");
   const [add, setAdd] = useState(false);
   const [isprivate,SetIsprivate] = useState<Boolean>(false);
+  const [author, setAuthor] = useState("");
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getData = async () => {
+    if(window.wallet !== undefined)
+    {
+      var addr = await window.wallet.getAddress();
+      setUser(addr);
+    }
+
+    console.log(user);
+
     const hash = await window.surveyInstance.surveys(SurveyHash);
-    console.log('Remix : ', hash);
+    setAuthor(hash[2]);
+    // console.log('Remix : ', hash);
     const ipfshash = hash[0];
     SetIsprivate(!hash[4]);
     // const data = await axios.get(`https://ipfs.eraswap.cloud/ipfs/${ipfshash}`);
     const data = await axios.get(`https://ipfs.infura.io/ipfs/${ipfshash}`);
-    console.log(data.data);
+    // console.log(data.data);
     //  if(data.status !== 200)setExist(false);
     setNewSurvey(data.data);
     const graph:SurveyData = data.data;
-    console.log(graph);
+    // console.log(graph);
     for(const i of graph.question ){ 
       let n = i.options.length;
-      console.log('value',i.options.length);
+      // console.log('value',i.options.length);
       const x = (new Array(n)).fill(0);
       DeclareResult.push(x);
     }
-    console.log(DeclareResult);
-    
-     
+    // console.log(DeclareResult);
   };
+
+
   const addUser = async () => {
       if (window.wallet) {
         try {
           const sur = await window.surveyInstance
             .connect(window.wallet)
-            .addUsers(SurveyHash,user);
+            .addUsers(SurveyHash,userId);
 
-          console.log('TXN Hash :', sur);
+          // console.log('TXN Hash :', sur);
           Swal.fire({
             icon: 'success',
             title: 'Done...',
@@ -100,10 +113,10 @@ function Result() {
           const x = new ethers.VoidSigner(add, window.provider);
 
           try {
-            const A = await window.surveyInstance.connect(x).estimateGas.addUsers(SurveyHash,user);
-            console.log(A); 
+            const A = await window.surveyInstance.connect(x).estimateGas.addUsers(SurveyHash,userId);
+            // console.log(A); 
           } catch (e) {
-            console.log('Error is : ', e);
+            // console.log('Error is : ', e);
             
             Swal.fire({
               icon: 'error',
@@ -119,20 +132,47 @@ function Result() {
           title: 'Oops...',
           text: 'Please Connect to wallet!',
         });
-
   }
+
+
   const handleChange = (e) => { 
     if(temp.length === 42 ){
       setAdd(true)}
     else{setAdd(false)}
       setTemp(e.target.value)
   }
+
+
   const addAddress = () => {
+    var required_entry = Data.filter((d)=>{
+      if(d.email === temp) return d;
+    })[0];
     
-    setUser([...user,temp]);
+    if(required_entry === undefined)
+    {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Invalid email ID',
+      });
+      return;
+    }
+    
+    var id_required = required_entry.id;
+
+    // console.log(temp);
+    // console.log(id_required);
+    setUserEmail([...userEmail, temp]);
+    setUserId([...userId, id_required]);
     setTemp("");
-    
   }
+
+  const removeAddress = () => {
+    setUserId(userId.filter((_, i) => i!==userId.length-1));
+    setUserEmail(userEmail.filter((_, i) => i!==userEmail.length-1));
+  }
+
+
   useEffect(() => {
     (async () => {
       try {
@@ -165,37 +205,45 @@ function Result() {
               <h1 style={{color: "white"}}>Analysis of Survey Result</h1>
 
               {
-                isprivate ? <div style={{ maxWidth: '800px' }} className="mx-auto">
-                  <div
-                    
-                    className="text-left bg-white p-5 rounded"
-                  >
-                    <h4 style={{color: "black"}}> Add users to be authorised for this survey.</h4>
-                    <hr/>
+                isprivate && user!=="None" && user===author
+                ? <div style={{ maxWidth: '800px' }} className="mx-auto">
+                    <div className="text-left bg-white p-5 rounded">
+                      <h4 style={{color: "black"}}> Add users to be authorised for this survey.</h4>
+                      <hr/>
 
-                    <Row>
-                      <Col>
-                        <div className="form-group column">
-                          <input className="form-control col-8" name="user" placeholder="Enter address of user to be authorised" value={temp} onChange={handleChange}/>
-                          <br/>
-                          <button className="btn btn-primary border bordercircle" onClick={addAddress}> <i className="fa fa-plus m-0" aria-hidden="true"></i></button>
-                        </div>                
-                      </Col>
-                      <Col>
-                        <ul className="list-group list-group-flush " style={{overflow:'auto'}} >
-                          {
-                            user.map(ele => (
-                              <>
-                                <li className="list-group-item">{ele}</li>
-                              </>
-                            ))
-                          }
-                        </ul>
-                        <button className="btn btn-primary" onClick={addUser}>Authorize above users for this survey</button>
-                      </Col>
-                    </Row>
+                      <Row>
+                        <Col>
+                          <div className="form-group column">
+                            <input className="form-control col-8" name="user" placeholder="Enter email Id of user to be authorised" value={temp} onChange={handleChange}/>
+                            <br/>
+                            <button className="btn btn-primary border bordercircle" onClick={addAddress}> <i className="fa fa-plus m-0" aria-hidden="true"></i> </button>
+                            <button className="btn btn-primary border bordercircle float-right" onClick={removeAddress}> <i className="fa fa-minus m-0" aria-hidden="true"></i> </button>
+                          </div>                
+                        </Col>
+                        <Col>
+                          <ul className="list-group list-group-flush " style={{overflow:'auto'}} >
+                            {
+                              userEmail.map((ele, i) => (
+                                <>
+                                  <li className="list-group-item">{i+1}) {ele} ({userId[i]})</li>
+                                </>
+                              ))
+                            }
+                          </ul>
+
+                          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                            {
+                              userId.length > 0
+                              ? <button className="btn btn-primary" onClick={addUser}>Authorize above {userId.length} users for this survey</button>
+                              : <button className="btn btn-primary disabled" onClick={addUser}>Authorize above users for this survey</button>
+                            }
+                            
+                          </div>
+                        
+                        </Col>
+                      </Row>
+                    </div>
                   </div>
-                </div>
                 :null
               }
 
