@@ -1,23 +1,23 @@
 .cardtop {
-  background-color: rgb(10, 34, 36, 0.2);
-  animation: change 8s infinite;
+  background-color: rgba(45, 131, 131, 0.5);
+  /* animation: change 10s infinite; */
   padding: 0 0;
 }
 
-@keyframes change {
+/* @keyframes change {
   25% {
-    background-color: rgb(#0e5767, 0.3);
+    background-color: rgba(#d7edf1, 0.7);
   }
   50% {
-    background-color: rgb(#0e5f68, 0.3);
+    background-color: rgba(#0e5f68, 0.7);
   }
   75% {
-    background-color: rgba(23, 122, 139, 0.3);
+    background-color: rgba(#075c66, 0.7);
   }
   100% {
-    background-color: rgb(#0b5161, 0.2);
+    background-color: rgba(#0b706b, 0.7);
   }
-}
+} */
 
 .card-text {
   color: rgba(245, 245, 245, 0.838);

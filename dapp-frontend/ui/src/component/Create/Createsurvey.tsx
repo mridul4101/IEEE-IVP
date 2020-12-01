@@ -22,7 +22,7 @@ const Createsurvey = () => {
       <MapProvider>
         <div className="survey mx-5 ">
           <div className="row w-100 ">
-            <div className=" col-md-8  mx-auto   p-4 bg-gradient-light border border-secondary rounded">
+            <div className=" col-md-8  mx-auto p-4  border border-secondary rounded">
               <div className="tabs ">
                 <Tabs
                   defaultActiveKey="See Results"

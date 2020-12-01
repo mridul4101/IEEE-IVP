@@ -1,6 +1,7 @@
 import StaticCard from "../StaticCard/StaticCard";
 
 import React, { useEffect, useState } from 'react';
+import "./Allsurvey.css"
 import { Button, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Timer } from '../Timer';
@@ -61,9 +62,9 @@ export default function AllSurvey() {
       <div className="my-5">
         <h1 className="text-center">ALL SURVEYS</h1>
       </div>
-      <hr style={{ color:"white"}}/>
+      
 
-      <div className="container">
+      <div className="container colorcard border border-outline-white">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
@@ -79,8 +80,8 @@ export default function AllSurvey() {
           }{' '}      
         </div>
       </div>
-      <hr style={{ color:"white"}}/>
-      <div className="container">
+      
+      <div className="container colorcard border border-outline-white">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
@@ -97,8 +98,8 @@ export default function AllSurvey() {
         </div>
       </div>
 
-          <hr style={{ color:"white"}}/>
-      <div className="container">
+          
+      <div className="container colorcard border border-outline-white">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
@@ -114,8 +115,8 @@ export default function AllSurvey() {
           }{' '}      
         </div>
       </div>
-      <hr style={{ color:"white"}}/>
-      <div className="container">
+      
+      <div className="container colorcard border border-outline-white">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
@@ -131,7 +132,7 @@ export default function AllSurvey() {
           }{' '}      
         </div>
       </div>
-       <hr style={{ color:"white"}}/>
+       
     </>
   )
 }

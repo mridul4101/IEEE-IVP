@@ -63,8 +63,8 @@ export default function Result ({ address })
       } catch (e) {
         let add = await window.wallet.getAddress();
         var err="";
-        if(e?.message?.includes("you have already build a Survey with this name"))
-          err = "You have already built a survey with this name.";
+        if(e?.message?.includes("You Have Already Built A Survey With This Name"))
+          err = "You Have Already Built A Survey With This Name";
         else
           err = e;
         Swal.fire({
@@ -91,7 +91,7 @@ export default function Result ({ address })
       <>
         <br />
         <i className="fa fa-check-circle" style={{ fontSize: '8em', color: '#54BE3D' }}></i>
-        <p>
+        <p className="text-primary">
           {' '}
           Transaction Sussessful <br /> Your Survey has been created{' '}
         </p>
@@ -147,7 +147,7 @@ export default function Result ({ address })
               <>
                 <div className="preloader" >
                 <Spinner animation="border" variant="primary" />
-                <Card.Text>Please wait ...</Card.Text>
+                <Card.Text className="text-primary">Please wait ...</Card.Text>
                 </div>
               </>
             ) : null

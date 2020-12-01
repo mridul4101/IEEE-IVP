@@ -15,8 +15,7 @@ svg {
   display: inline-block;
   position: fixed;
   left: 1px;
-  top: -80px;
-  /* z-index: -1; */
+  top: -70px;
 }
 
 body {
@@ -173,7 +172,7 @@ body {
 .st28 {
   opacity: 5e-2;
   fill: #1b9ba1;
-  stroke: #24898e;
+  stroke: #175c5f;
   stroke-miterlimit: 10;
 }
 
@@ -523,7 +522,7 @@ body {
 #top .st51,
 #top .st25,
 #top .st46 {
-  animation: drift-right 175s alternate ease-in-out infinite !important;
+  animation: drift-right 195s alternate ease-in-out infinite !important;
 }
 #top .st49,
 #top .st42,

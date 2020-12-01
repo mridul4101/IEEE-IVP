@@ -1,7 +1,7 @@
 .card-container {
   perspective: 1000px;
-  height: 300px;
-  width: 270px;
+  height: 320px;
+  width: 250px;
 }
 .cards {
   transition: transform 0.8s;
@@ -49,4 +49,7 @@
 .card-img-top {
   width: 100%;
   height: 65%;
+}
+.row {
+  --bs-gutter-x: 0;
 }

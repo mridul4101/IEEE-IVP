@@ -7,8 +7,8 @@ import { Timer } from '../Timer';
 const StaticCard=(props:any)=> {
   return (
     <>
-     <div className='col-md-4 col-20 mx-auto '>
-       <div className="card-container">
+     <div className='col-md-5 col-20 mx-auto '>
+       <div className="card-container mx-5 ">
         <div className="row">
         <div className="cardtop ">
             <div className="card-body border border-secondary rounded">

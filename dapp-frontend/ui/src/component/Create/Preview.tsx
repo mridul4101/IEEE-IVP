@@ -13,7 +13,7 @@ function Question(props: CardProps) {
   return (
     <div
       
-      className="text-left bg-white my-3 p-4 rounded"
+      className="text-left  my-3 p-4 rounded"
     >
       <h6>
         <span className="badge badge-pill badge-primary mr-2">Q : {props.index + 1}</span>

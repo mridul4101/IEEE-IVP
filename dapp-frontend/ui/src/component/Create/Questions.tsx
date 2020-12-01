@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button,Icon} from 'antd';
+import { Form, Input, Button} from 'antd';
 import { FormComponentProps } from 'antd/lib/form';
 import ReactDragListView from 'react-drag-listview';
 import { useDynamicList } from 'ahooks';
@@ -20,9 +20,9 @@ const Card = (props: CardProps) => {
   return (
     <div
       
-      className="bg-white rounded my-3 px-5 py-3  text-left "
+      className="bg-white rounded my-3 px-3 py-4  text-left "
     >
-      <Icon style={{ cursor: 'move', marginRight: 8 }} type="drag" />
+      {/* <Icon style={{ cursor: 'move', marginRight: 8 }} type="drag" /> */}
       Question
       <i
         className="fa fa-trash"

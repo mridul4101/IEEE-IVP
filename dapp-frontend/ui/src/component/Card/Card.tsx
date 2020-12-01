@@ -4,7 +4,7 @@ import "./Card.css" ;
 const Card=(props:any)=> {
   return (
     <>
-     <div className='col-md-4 col-10 mx-auto  '>
+     <div className='col-md-4 col-30 mx-auto  mx-4'>
        <div className="card-container ">
         <div className="cards border border-secondary rounded">
         <div className="card card-front">
