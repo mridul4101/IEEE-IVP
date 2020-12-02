@@ -7,6 +7,10 @@ import {HorizontalBar} from 'react-chartjs-2';
 import { ethers } from 'ethers';
 import Swal from 'sweetalert2';
 import Data from './database.json';
+import emailjs from 'emailjs-com';
+import{ init } from 'emailjs-com';
+
+init("user_NI9DNlQc3Lcvb48w7nGYW");
 
 interface Q {
   question: string;
@@ -96,6 +100,25 @@ function Result() {
   const addUser = async () => {
       if (window.wallet) {
         try {
+
+          // var variable = {from_name: 'Mridul 2015', reply_to: 'mridul.dgp2020@gmail.com', address: SurveyHash};
+          const templateId = 'template_x07vc7r';
+          const serviceId = 'service_7ki6427';
+
+          userEmail.map(e => {
+
+            var variable = {from_name: 'Mridul 2015', reply_to: e, address: SurveyHash};
+            emailjs.send(
+              serviceId, templateId,
+              variable
+              ).then(res => {
+                console.log('Email successfully sent!')
+              })
+              // Handle errors here however you like, or use a React error boundary
+              .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+
+          })
+          
           const sur = await window.surveyInstance
             .connect(window.wallet)
             .addUsers(SurveyHash,userId);
