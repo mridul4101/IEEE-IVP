@@ -103,7 +103,7 @@ function Result() {
 
           // var variable = {from_name: 'Mridul 2015', reply_to: 'mridul.dgp2020@gmail.com', address: SurveyHash};
           const templateId = 'template_x07vc7r';
-          const serviceId = 'service_7ki6427';
+          const serviceId = 'service_nwdogwb';
 
           userEmail.map(e => {
 
