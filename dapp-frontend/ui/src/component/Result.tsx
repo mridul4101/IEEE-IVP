@@ -107,7 +107,7 @@ function Result() {
 
           userEmail.map(e => {
 
-            var variable = {from_name: 'Mridul 2015', reply_to: e, address: SurveyHash};
+            var variable = {reply_to: e, address: SurveyHash};
             emailjs.send(
               serviceId, templateId,
               variable
