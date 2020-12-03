@@ -69,7 +69,7 @@ export default function Mysurvey() {
       <div className="my-5">
         <h1 className="text-center ">MY SURVEY PAGE </h1>
       </div>
-      <div className="container colorcard border border-outline-white">
+      <div className="container ">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
@@ -77,7 +77,7 @@ export default function Mysurvey() {
           </div>
         </div>
           
-        <div className="row">
+        <div className="row colorcard border border-outline-white pt-2 ">
           {
             allPublic.map((ele, i) => {
               return (ele[3]>(Date.now()/1000) ? <StaticCard key={i} time={ele[3]} title={ele[1]} button1={"View Survey"} link1={"/SurveyDetail/"+ele[5]} button2={"See Results"} link2={'/Result/' + ele[5]}/> : null)
@@ -86,7 +86,7 @@ export default function Mysurvey() {
         </div>
       </div>
       
-      <div className="container colorcard border border-outline-white">
+      <div className="container ">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
@@ -94,7 +94,7 @@ export default function Mysurvey() {
           </div>
         </div>
           
-        <div className="row">
+        <div className="row colorcard border border-outline-white pt-2 ">
           {
             allPublic.map((ele, i) => {
               return (ele[3]<(Date.now()/1000) ? <StaticCard key={i} time={ele[3]} title={ele[1]} button1={"View Survey"} link1={"/SurveyDetail/"+ele[5]} button2={"See Results"} link2={'/Result/' + ele[5]}/> : null)
@@ -104,7 +104,7 @@ export default function Mysurvey() {
       </div>
 
      
-      <div className="container colorcard border border-outline-white">
+      <div className="container">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
@@ -112,7 +112,7 @@ export default function Mysurvey() {
           </div>
         </div>
           
-        <div className="row">
+        <div className="row colorcard border border-outline-white pt-2">
           {
             allPrivate.map((ele, i) => {
               return (ele[3]>(Date.now()/1000) ? <StaticCard key={i} time={ele[3]} title={ele[1]} button1={"View Survey"} link1={"/SurveyDetail/"+ele[5]} button2={"See Results"} link2={'/Result/' + ele[5]}/> : null)
@@ -121,7 +121,7 @@ export default function Mysurvey() {
         </div>
       </div>
       
-      <div className="container colorcard border border-outline-white">
+      <div className="container ">
 
         <div className="rows text-left mt30 mb10">
           <div className="header-title">
@@ -129,7 +129,7 @@ export default function Mysurvey() {
           </div>
         </div>
           
-        <div className="row">
+        <div className="row colorcard border border-outline-white pt-2 ">
           {
             allPrivate.map((ele, i) => {
               return (ele[3]<(Date.now()/1000) ? <StaticCard key={i} time={ele[3]} title={ele[1]} button1={"View Survey"} link1={"/SurveyDetail/"+ele[5]} button2={"See Results"} link2={'/Result/' + ele[5]}/> : null)

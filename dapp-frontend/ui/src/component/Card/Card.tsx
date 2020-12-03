@@ -4,8 +4,8 @@ import "./Card.css" ;
 const Card=(props:any)=> {
   return (
     <>
-     <div className='col-md-4 col-30 mx-auto  mx-4'>
-       <div className="card-container ">
+     <div className='col-md-4 col-20 m-auto '>
+       <div className="card-container mx-auto mt-2 mb-2 ">
         <div className="cards border border-secondary rounded">
         <div className="card card-front">
           <img src={props.imgsrc} className="card-img-top" alt={props.imgsrc} />
