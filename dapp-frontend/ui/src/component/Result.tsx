@@ -237,13 +237,13 @@ function Result() {
                       <Row>
                         <Col>
                           <div className="form-group column">
-                            <input className="form-control col-8" name="user" placeholder="Enter email Id of user to be authorised" value={temp} onChange={handleChange}/>
+                            <input className="form-control" name="user" placeholder="Enter email Id of user to be authorised" value={temp} onChange={handleChange}/>
                             <br/>
                             <button className="btn btn-primary border bordercircle" onClick={addAddress}> <i className="fa fa-plus m-0" aria-hidden="true"></i> </button>
                             <button className="btn btn-primary border bordercircle float-right" onClick={removeAddress}> <i className="fa fa-minus m-0" aria-hidden="true"></i> </button>
                           </div>                
                         </Col>
-                        <Col>
+                        <Col style={{marginTop: "0px"}}>
                           <ul className="list-group list-group-flush " style={{overflow:'auto'}} >
                             {
                               userEmail.map((ele, i) => (
@@ -257,7 +257,9 @@ function Result() {
                           <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                             {
                               userId.length > 0
-                              ? <button className="btn btn-primary" onClick={addUser}>Authorize above {userId.length} users for this survey</button>
+                              ? userId.length === 1
+                                ? <button className="btn btn-primary" onClick={addUser}>Authorize above {userId.length} user for this survey</button>
+                                : <button className="btn btn-primary" onClick={addUser}>Authorize above {userId.length} users for this survey</button>
                               : <button className="btn btn-primary disabled" onClick={addUser}>Authorize above users for this survey</button>
                             }
                             
