@@ -4,8 +4,8 @@ const cors = require('cors')
 const helmet = require('helmet')
 const apiRoutes = require('./api')
 const db_conn = require('./util/mongoDB')
-require('dotenv').config();
-
+const path = require('path');
+// console.log("0x229a563023CECee85a55DA14162c8300388C5D70".length)
 const PORT = process.env.PORT || 5000
 
 // middlewares
