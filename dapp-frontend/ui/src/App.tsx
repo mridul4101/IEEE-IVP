@@ -10,6 +10,7 @@ import Navbar from './component/Navbar/Navbar';
 import Createsurvey from './component/Create/Createsurvey';
 import Surveys from './component/Surveys';
 import Result from './component/Result';
+import Form from './component/Form';
 import './App.css';
 
 const App=()=> {
@@ -22,6 +23,7 @@ const App=()=> {
       <Route exact path="/mysurvey" component={Mysurvey}/>
       <Route exact path="/help" component={Help}/>
       <Route exact path="/Createsurvey" component={Createsurvey}/>
+      <Route exact path="/Form" component={Form}/>
       <Route exact path="/SurveyDetail/:SurveyHash" component={Surveys}/>
       <Route path="/Result/:SurveyHash" component={Result} />
       <Redirect to="/"/>

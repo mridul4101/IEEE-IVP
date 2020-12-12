@@ -90,6 +90,9 @@ const Navbar =() =>{
                         <NavLink to="/Help"className="nav-link" >Help</NavLink>
                         </li> 
                         <li className="nav-item">
+                        <NavLink to="/Form"className="nav-link" >Register</NavLink>
+                        </li>
+                        <li className="nav-item">
                         <Button className=" nav-link btn btn-info text-dark" onClick={loadMetamask}>{ address }</Button>
                         </li>
                         
