@@ -17,6 +17,7 @@ const Form = () => {
       emailid:emailid.value,
     });
   };
+
   return (
     <div style={{ background:"whitesmoke" , width: "390px",padding:"10px 10px", margin: "40px auto" ,color:"black" }}>
       <form
@@ -36,6 +37,7 @@ const Form = () => {
 
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
+      <br/><br/>
       <div className="border border-dark p-auto m-auto">
         <h4>Your Info</h4>
         <p>Name: {data.name}</p>
@@ -45,5 +47,5 @@ const Form = () => {
     </div>
   );
 };
-export default Form;
 
+export default Form;
