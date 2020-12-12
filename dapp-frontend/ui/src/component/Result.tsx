@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import {HorizontalBar} from 'react-chartjs-2';
 import { ethers } from 'ethers';
 import Swal from 'sweetalert2';
-import Data from './database.json';
+// import Data from './database.json';
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 
@@ -81,7 +81,7 @@ function Result() {
     // console.log('Remix : ', hash);
     const ipfshash = hash[0];
     SetIsprivate(!hash[4]);
-    // const data = await axios.get(`https://ipfs.eraswap.cloud/ipfs/${ipfshash}`);
+
     const data = await axios.get(`https://ipfs.infura.io/ipfs/${ipfshash}`);
     // console.log(data.data);
     //  if(data.status !== 200)setExist(false);
@@ -166,8 +166,6 @@ function Result() {
       setTemp(e.target.value)
   }
 
-
-  // pink file fix filter physical stuff bone buyer panic thing hunt few
   const URL = "http://localhost:5000/getuser";
 
   const addAddress = async() => {
@@ -186,6 +184,11 @@ function Result() {
     }
     catch(e){
       console.log(e.response.data);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: e.response.data.error,
+        });
       return;
     }
     
