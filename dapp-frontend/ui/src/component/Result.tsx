@@ -10,6 +10,7 @@ import Data from './database.json';
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 
+
 init("user_NI9DNlQc3Lcvb48w7nGYW");
 
 interface Q {
@@ -166,27 +167,44 @@ function Result() {
   }
 
 
-  const addAddress = () => {
-    var required_entry = Data.filter((d)=>{
-      if(d.email === temp) return d;
-    })[0];
-    
-    if(required_entry === undefined)
-    {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Invalid email ID',
-      });
+  // pink file fix filter physical stuff bone buyer panic thing hunt few
+  const URL = "http://localhost:5000/getuser";
+
+  const addAddress = async() => {
+    // var required_entry = Data.filter((d)=>{
+    //   if(d.email === temp) return d;
+    // })[0];
+    var required_entry = {name:"", email:"", hex:""};
+    var required_id = "";
+
+    console.log(temp);
+    try{
+      const response = await axios.post(URL,{email:temp});
+      console.log(response.data);
+      required_entry = response.data
+      required_id = required_entry.hex;
+    }
+    catch(e){
+      console.log(e.response.data);
       return;
     }
     
-    var id_required = required_entry.id;
+    // if(required_entry === undefined)
+    // {
+    //   Swal.fire({
+    //     icon: 'error',
+    //     title: 'Oops...',
+    //     text: 'Invalid email ID',
+    //   });
+    //   return;
+    // }
+    
+    // var id_required = required_entry.id;
 
     // console.log(temp);
     // console.log(id_required);
     setUserEmail([...userEmail, temp]);
-    setUserId([...userId, id_required]);
+    setUserId([...userId, required_id]);
     setTemp("");
   }
 

@@ -19,9 +19,7 @@ const userSchema = new mongoose.Schema({
 });
 // 0x229a563023CECee85a55DA14162c8300388C5D70
 const hexValidator = (hex) =>{
-  if(hex.length === 42){
-    if(hex[0] === '0' && hex[1] === 'x') return true;
-  }
+  if(hex[0] === '0' && hex[1] === 'x') return true;
   return false;
 }
 userSchema.pre('save',function (next){
@@ -30,7 +28,7 @@ userSchema.pre('save',function (next){
     throw Error("The email must be valid.")
   }
   if(!hexValidator(hex)){
-    throw Error("hex value should be of 42 chars and should start with 0x")
+    throw Error("hex value should start with 0x")
   }
   next();
 });
