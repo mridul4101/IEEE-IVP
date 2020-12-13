@@ -28,7 +28,9 @@ const Form = () => {
     setData({...data, [attribute]:event.target.value});
   }
   return (
-    <div style={{ background:"whitesmoke" , width: "390px",padding:"10px 10px", margin: "40px auto" ,color:"black" }}>
+    <div className="row w-100 ">
+     <div className=" col-md-8  mx-auto p-4  border border-secondary rounded">
+    <div className="border border-info rounded " style={{ background:"white",padding:"10px 10px", margin: " 20px auto" ,color:"black" }}>
       <form
         onSubmit={onSubmitForm}
         style={{
@@ -38,22 +40,25 @@ const Form = () => {
       >
         <label htmlFor="name">Name: </label>
         <input type="text" value={data.name} onChange={(e)=>{changeHandler(e,"name")}} name="name" />
-
         <label htmlFor="metamaskadd">Metamask Id: </label>
         <input type="text" value={data.hex}  onChange={(e)=>{changeHandler(e,"hex")}} name="metamaskadd" />
         <label htmlFor="emailid">Email Id: </label>
         <input type="email" value={data.email}  onChange={(e)=>{changeHandler(e,"email")}} name="emailid" />
-
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <p style={{color:responseFromServer.color, }}>{responseFromServer.message}</p>
+        <button type="submit" className="btn btn-outline-info text-dark m-auto">Submit</button>
       </form>
-      <p style={{color:responseFromServer.color}}>{responseFromServer.message}</p>
-      <br/><br/>
-      <div className="border border-dark p-auto m-auto">
+      
+    
+      </div>
+      <br/>
+      <div className="border border-info rounded p-2 m-auto bg-white text-dark">
         <h4>Your Info</h4>
         <p>Name: {data.name}</p>
         <p>Metamask Address: {data.hex}</p>
         <p>Email Id: {data.email}</p>
       </div>
+    
+    </div>
     </div>
   );
 };
