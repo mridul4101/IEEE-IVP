@@ -22,4 +22,5 @@ During the survey as well as after it ends, one can view the current analysis of
 5. Typescript
 6. email JS
 7. Solidity
-8. Blockchain network: Infura, Rinkeby Test Network, IPFS
+8. Database: MongoDB
+9. Blockchain network: Infura, Rinkeby Test Network, IPFS
